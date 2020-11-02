@@ -12,3 +12,21 @@
 		tama++; //el tamaño se incrementa 
 	}
 	
+	//Libni Madai Jimenez Herrera
+	//eliminar un elemento de la cola
+	public int quitar(){
+		int aux=inicio.dato;
+		inicio=inicio.siguiente;
+		tama--; //le agregamos esto para asi poder reducir la cola ya que eliminamos un dato
+		return aux;
+	}
+	//metodo parasaber quien esta al inicion de la cola o la cabeza
+	public int inicioCola(){
+		return inicio.dato;
+	}	
+	//metodo para saber el tamaño de la cola
+	public int tamanioCola(){
+		return tama;
+	}
+}
+	
