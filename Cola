@@ -1,13 +1,19 @@
-
-
-
-
-
-
-
-
-
-
+//Demetrio Hernandez Valencia
+package Colas;
+public class Cola {
+	NodoCola inicio, fin; //para saber el inicio de la cola y el fin
+	int tama; //para saber el tamaño de la cola 
+	
+	public Cola(){
+		inicio=fin=null;
+		tama=0;
+	}
+	
+	//metodo para saber si esta vacia la cola
+	public boolean estaVacia(){
+		return inicio==null;
+	}
+	
 //Juan Carlos Lizarraga Grave
 //Metodo para insertar los datos o elementos 
 	public void insertar(int ele){
