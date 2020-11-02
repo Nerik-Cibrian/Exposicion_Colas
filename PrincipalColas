@@ -1,0 +1,20 @@
+package Colas;    //Edwin Josue Garcia gomez
+
+import javax.swing.JOptionPane;
+
+public class PrincipalColas {
+
+	public static void main(String[] args) {
+	int opcion=0, elemento=0;
+	
+	//creo la cola
+	Cola colita = new Cola();
+	do{
+		try{
+			opcion=Integer.parseInt(JOptionPane.showInputDialog(null, //el menu de opciones 
+					"1. Insertar un elemento en la cola\n" +
+					"2. Quitar un elemento de la cola\n"+
+					"3. ¿La cola esta vacia?\n"+
+					"4. Elemento ubicado al Inicio de la cola\n"+
+					"5. Tamaño de la cola\n"+
+					"6. Salir", "Menu de opciones una cola", JOptionPane.QUESTION_MESSAGE));
