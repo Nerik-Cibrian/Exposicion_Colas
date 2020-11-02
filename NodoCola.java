@@ -1,5 +1,5 @@
 package Colas;
-//juan carlos
+//juan carlos gonzalez peña
 public class NodoCola {
  int dato;
  NodoCola siguiente;			//variables 
