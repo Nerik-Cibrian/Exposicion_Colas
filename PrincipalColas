@@ -1,5 +1,4 @@
 package Colas;    //Edwin Josue Garcia gomez   
-// Nerik Stephanye Cibrian Padilla
 
 import javax.swing.JOptionPane;
 
@@ -19,6 +18,7 @@ public class PrincipalColas {
 					"4. Elemento ubicado al Inicio de la cola\n"+
 					"5. Tamaño de la cola\n"+
 					"6. Salir", "Menu de opciones una cola", JOptionPane.QUESTION_MESSAGE));
+						// Nerik Stephanye Cibrian Padilla
 						switch(opcion){
 				case 1:
 					elemento=Integer.parseInt(JOptionPane.showInputDialog(null, "ingresa el elemento a insertar","insertando en la cola",
