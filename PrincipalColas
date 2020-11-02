@@ -1,4 +1,5 @@
-package Colas;    //Edwin Josue Garcia gomez
+package Colas;    //Edwin Josue Garcia gomez   
+// Nerik Stephanye Cibrian Padilla
 
 import javax.swing.JOptionPane;
 
@@ -18,3 +19,56 @@ public class PrincipalColas {
 					"4. Elemento ubicado al Inicio de la cola\n"+
 					"5. Tamaño de la cola\n"+
 					"6. Salir", "Menu de opciones una cola", JOptionPane.QUESTION_MESSAGE));
+						switch(opcion){
+				case 1:
+					elemento=Integer.parseInt(JOptionPane.showInputDialog(null, "ingresa el elemento a insertar","insertando en la cola",
+							JOptionPane.QUESTION_MESSAGE));
+					colita.insertar(elemento);
+					break;
+				case 2:
+					if(!colita.estaVacia()){
+						JOptionPane.showMessageDialog(null, "El elemento atendido es " + colita.quitar(),
+								"Quitando elementos de la cola", JOptionPane.INFORMATION_MESSAGE);
+					}else{
+						JOptionPane.showMessageDialog(null, "La cola esta esta vacia ",
+								"Cola vacia ", JOptionPane.INFORMATION_MESSAGE);
+					}
+					break;
+				case 3:
+					if(colita.estaVacia()){
+						JOptionPane.showMessageDialog(null, "La cola esta esta vacia ",
+								"Cola vacia ", JOptionPane.INFORMATION_MESSAGE);
+					}else{
+						JOptionPane.showMessageDialog(null, "La cola no esta esta vacia "
+								,"Cola no vacia ", JOptionPane.INFORMATION_MESSAGE);
+					}
+					break;
+				case 4:
+					if(!colita.estaVacia()){
+						JOptionPane.showMessageDialog(null, "El elemento ubicado al inicio de cola es: " + colita.inicioCola(),
+								"Cola vacia ", JOptionPane.INFORMATION_MESSAGE);
+					}else{
+						JOptionPane.showMessageDialog(null, "La cola esta esta vacia ",
+								"Cola vacia ", JOptionPane.INFORMATION_MESSAGE);
+					}
+					break;
+				case 5:
+					JOptionPane.showMessageDialog(null, "El tamaño de la cola es: " + colita.tamanioCola(),
+							"Cola vacia ", JOptionPane.INFORMATION_MESSAGE);
+					break;
+				case 6:
+					JOptionPane.showMessageDialog(null,"Programa finalizado",
+							"Fin ", JOptionPane.INFORMATION_MESSAGE);
+					break;
+						default:
+							JOptionPane.showMessageDialog(null, "Opcion incorrecta ",
+									"Cuidado¡ ", JOptionPane.INFORMATION_MESSAGE);
+			}
+		}catch(NumberFormatException n){
+			JOptionPane.showMessageDialog(null, "ERROR" + n.getMessage());
+		}
+	}while(opcion != 6);
+	
+	}
+
+}
